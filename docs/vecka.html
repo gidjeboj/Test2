@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veckoschema – Mosjö-skola 3B</title>
+<style>
+:root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface2: #334155;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent: #818cf8;
+    --accent2: #6366f1;
+    --radius: 10px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 0 0 2rem;
+}
+.header {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: var(--bg);
+    padding: 1.75rem 1rem 1.5rem;
+    text-align: center;
+    position: relative;
+}
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+}
+.header-pill {
+    background: color-mix(in srgb, var(--bg) 20%, transparent);
+    color: var(--bg);
+    text-decoration: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 99px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transition: background 0.15s;
+}
+.header-pill:hover {
+    background: color-mix(in srgb, var(--bg) 35%, transparent);
+}
+.header h1 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+.header .title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-top: 0.35rem;
+}
+.header .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.65;
+    margin-top: 0.15rem;
+    font-weight: 500;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+.day-col {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.day-header {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: var(--surface);
+}
+.day-header.today {
+    background: var(--accent);
+    color: var(--bg);
+}
+.wl-group {
+    display: flex;
+    gap: 0.25rem;
+}
+.wl {
+    flex: 1;
+    min-width: 0;
+    padding: 0.4rem 0.5rem;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--subject-color, var(--surface2)) 15%, var(--surface));
+}
+.wl-time {
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    display: block;
+    margin-bottom: 0.1rem;
+}
+.wl-subject {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.wl-teacher {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 0.1rem;
+}
+.wl-lunch {
+    cursor: pointer;
+}
+.wl-lunch-menu {
+    display: none;
+    margin-top: 0.2rem;
+    font-size: 0.6rem;
+    color: var(--text);
+    line-height: 1.3;
+}
+.wl-lunch-menu.open {
+    display: block;
+}
+@media (max-width: 600px) {
+    .week-grid { gap: 0.3rem; }
+    .day-header { font-size: 0.65rem; padding: 0.35rem; }
+    .wl { padding: 0.3rem 0.35rem; }
+    .wl-time { font-size: 0.55rem; }
+    .wl-subject { font-size: 0.65rem; }
+    .wl-teacher { font-size: 0.55rem; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <div class="header-nav">
+        <a class="header-pill" href="index.html">🕐 Idag</a>
+        <a class="header-pill" href="calendar.ics">📆 .ics</a>
+    </div>
+    <h1>📚 Veckoschema – Mosjö-skola 3B</h1>
+    <div class="title">Vecka 48</div>
+    <div class="subtitle">23/11 – 27/11</div>
+</div>
+<div class="container">
+    <div class="week-grid">
+        
+        <div class="day-col">
+            <div class="day-header today">Mån 23/11</div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #f472b6">
+                    <span class="wl-time">08:10–09:30</span>
+                    <span class="wl-subject">SL a)</span>
+                    <span class="wl-teacher">MUASL23</span>
+                    
+                </div>
+                
+                
+                <div class="wl" style="--subject-color: #a78bfa">
+                    <span class="wl-time">08:10–09:30</span>
+                    <span class="wl-subject">SV b)</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #fb923c">
+                    <span class="wl-time">09:50–11:20</span>
+                    <span class="wl-subject">SL b)</span>
+                    <span class="wl-teacher">MUASL23</span>
+                    
+                </div>
+                
+                
+                <div class="wl" style="--subject-color: #38bdf8">
+                    <span class="wl-time">09:50–11:20</span>
+                    <span class="wl-subject">SV a)</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #a78bfa">
+                    <span class="wl-time">12:20–13:00</span>
+                    <span class="wl-subject">MA</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="day-col">
+            <div class="day-header">Tis 24/11</div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">08:10–08:55</span>
+                    <span class="wl-subject">SV</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">08:55–09:30</span>
+                    <span class="wl-subject">EN</span>
+                    <span class="wl-teacher">ANFRO28</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #fbbf24">
+                    <span class="wl-time">09:50–10:35</span>
+                    <span class="wl-subject">MU</span>
+                    <span class="wl-teacher">ANFRO28</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #a78bfa">
+                    <span class="wl-time">10:40–11:20</span>
+                    <span class="wl-subject">MA</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #a78bfa">
+                    <span class="wl-time">12:20–13:00</span>
+                    <span class="wl-subject">SV b)</span>
+                    <span class="wl-teacher">MALUN34,ANFRE34</span>
+                    
+                </div>
+                
+                
+                <div class="wl" style="--subject-color: #2dd4bf">
+                    <span class="wl-time">12:20–13:00</span>
+                    <span class="wl-subject">IDH a)</span>
+                    <span class="wl-teacher">INJAG23</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #f87171">
+                    <span class="wl-time">13:10–13:50</span>
+                    <span class="wl-subject">IDH b)</span>
+                    <span class="wl-teacher">INJAG23</span>
+                    
+                </div>
+                
+                
+                <div class="wl" style="--subject-color: #38bdf8">
+                    <span class="wl-time">13:10–13:50</span>
+                    <span class="wl-subject">SV a)</span>
+                    <span class="wl-teacher">MALUN34,ANFRE34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #818cf8">
+                    <span class="wl-time">14:00–14:30</span>
+                    <span class="wl-subject">FOR</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="day-col">
+            <div class="day-header">Ons 25/11</div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">08:10–08:30</span>
+                    <span class="wl-subject">SV</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #a78bfa">
+                    <span class="wl-time">08:30–09:30</span>
+                    <span class="wl-subject">MA</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">09:50–10:40</span>
+                    <span class="wl-subject">SV</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #818cf8">
+                    <span class="wl-time">10:40–11:20</span>
+                    <span class="wl-subject">SO</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">12:20–13:05</span>
+                    <span class="wl-subject">NO/TK</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">13:05–13:45</span>
+                    <span class="wl-subject">SV</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #818cf8">
+                    <span class="wl-time">13:45–14:30</span>
+                    <span class="wl-subject">BL</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="day-col">
+            <div class="day-header">Tor 26/11</div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">08:10–08:30</span>
+                    <span class="wl-subject">SV</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #a78bfa">
+                    <span class="wl-time">08:30–09:30</span>
+                    <span class="wl-subject">MA</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">09:50–10:40</span>
+                    <span class="wl-subject">SV</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #818cf8">
+                    <span class="wl-time">10:40–11:20</span>
+                    <span class="wl-subject">SO</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #818cf8">
+                    <span class="wl-time">12:20–13:05</span>
+                    <span class="wl-subject">SO</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">13:05–13:45</span>
+                    <span class="wl-subject">TK</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">13:45–14:30</span>
+                    <span class="wl-subject">NO/TK</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="day-col">
+            <div class="day-header">Fre 27/11</div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #34d399">
+                    <span class="wl-time">09:00–10:20</span>
+                    <span class="wl-subject">SV</span>
+                    <span class="wl-teacher">MALUN34</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #818cf8">
+                    <span class="wl-time">10:30–11:10</span>
+                    <span class="wl-subject">MA b)</span>
+                    <span class="wl-teacher">MALUN34,ANFRE34</span>
+                    
+                </div>
+                
+                
+                <div class="wl" style="--subject-color: #2dd4bf">
+                    <span class="wl-time">10:30–11:10</span>
+                    <span class="wl-subject">IDH a)</span>
+                    <span class="wl-teacher">INJAG23</span>
+                    
+                </div>
+                
+            </div>
+            
+            <div class="wl-group">
+                
+                
+                <div class="wl" style="--subject-color: #a3e635">
+                    <span class="wl-time">12:20–13:00</span>
+                    <span class="wl-subject">MA a)</span>
+                    <span class="wl-teacher">MALUN34,ANFRE34</span>
+                    
+                </div>
+                
+                
+                <div class="wl" style="--subject-color: #f87171">
+                    <span class="wl-time">12:20–13:00</span>
+                    <span class="wl-subject">IDH b)</span>
+                    <span class="wl-teacher">INJAG23</span>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>

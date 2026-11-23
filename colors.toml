@@ -1,0 +1,97 @@
+[subjects]
+"BL" = "#818cf8"
+"EN" = "#34d399"
+"FOR" = "#818cf8"
+"IDH a)" = "#2dd4bf"
+"IDH b)" = "#f87171"
+"MA" = "#a78bfa"
+"MA a)" = "#a3e635"
+"MA b)" = "#818cf8"
+"MU" = "#fbbf24"
+"NO/TK" = "#34d399"
+"SL a)" = "#f472b6"
+"SL b)" = "#fb923c"
+"SO" = "#818cf8"
+"SV" = "#34d399"
+"SV a)" = "#38bdf8"
+"SV b)" = "#a78bfa"
+"TK" = "#34d399"
+
+[teachers]
+"ANFRO28" = "#5eead4"
+"INJAG23" = "#93c5fd"
+"MALUN34" = "#93c5fd"
+"MALUN34,ANFRE34" = "#86efac"
+"MUASL23" = "#fdba74"
+
+[themes.catppuccin-mocha]
+"accent" = "#cba6f7"
+"accent2" = "#b4befe"
+"bg" = "#1e1e2e"
+"surface" = "#313244"
+"surface2" = "#45475a"
+"text" = "#cdd6f4"
+"text-muted" = "#a6adc8"
+
+[themes.default]
+"accent" = "#818cf8"
+"accent2" = "#6366f1"
+"bg" = "#0f172a"
+"surface" = "#1e293b"
+"surface2" = "#334155"
+"text" = "#f1f5f9"
+"text-muted" = "#94a3b8"
+
+[themes.dracula]
+"accent" = "#ff79c6"
+"accent2" = "#bd93f9"
+"bg" = "#282a36"
+"surface" = "#44475a"
+"surface2" = "#6272a4"
+"text" = "#f8f8f2"
+"text-muted" = "#bd93f9"
+
+[themes.everforest]
+"accent" = "#a7c080"
+"accent2" = "#83c092"
+"bg" = "#2d353b"
+"surface" = "#343f44"
+"surface2" = "#475258"
+"text" = "#d3c6aa"
+"text-muted" = "#859289"
+
+[themes.gruvbox]
+"accent" = "#fabd2f"
+"accent2" = "#fe8019"
+"bg" = "#282828"
+"surface" = "#3c3836"
+"surface2" = "#504945"
+"text" = "#ebdbb2"
+"text-muted" = "#a89984"
+
+[themes.nord]
+"accent" = "#88c0d0"
+"accent2" = "#81a1c1"
+"bg" = "#2e3440"
+"surface" = "#3b4252"
+"surface2" = "#434c5e"
+"text" = "#eceff4"
+"text-muted" = "#d8dee9"
+
+[themes.rose-pine]
+"accent" = "#c4a7e7"
+"accent2" = "#ebbcba"
+"bg" = "#191724"
+"surface" = "#1f1d2e"
+"surface2" = "#26233a"
+"text" = "#e0def4"
+"text-muted" = "#908caa"
+
+[themes.tokyo-night]
+"accent" = "#7aa2f7"
+"accent2" = "#bb9af7"
+"bg" = "#1a1b26"
+"surface" = "#24283b"
+"surface2" = "#414868"
+"text" = "#c0caf5"
+"text-muted" = "#565f89"

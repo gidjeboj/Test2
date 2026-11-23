@@ -1,0 +1,6 @@
+[skola24]
+api_base = "https://web.skola24.se/api"
+x_scope = "8a22163c-8662-4535-9050-bc5e1923df48"
+host = "orebro.skola24.se"
+unit_guid = "MmQyZmEyMjctYmJlNi1mZmE4LTkzMDctZDIzNDU0Njc2ZjI5"
+class_name = "3B"
