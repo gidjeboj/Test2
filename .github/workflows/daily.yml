@@ -1,0 +1,47 @@
+name: Daily Build and Publish
+
+'on':
+  schedule:
+    - cron: '0 3 * * *'
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get repository
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          
+      - name: Install dependencies
+        run: pip install Jinja2 httpx icalendar
+
+      - name: Run build.py
+        run: python build.py
+
+      - name: Check generated files
+        run: |
+          echo "Files in docs:"
+          ls -la docs
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload docs
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./docs
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
